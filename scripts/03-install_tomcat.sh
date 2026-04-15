@@ -224,7 +224,7 @@ configure_permissions() {
     local tomcat_home="${ALFRESCO_HOME}/tomcat"
     
     # Set ownership
-    sudo chown -R "${ALFRESCO_USER}:${ALFRESCO_GROUP}" "$tomcat_home"
+    sudo chown -R "${ALFRESCO_USER}:${ALFRESCO_GROUP}" "${ALFRESCO_HOME}"
     
     # Set execute permissions on scripts
     sudo chmod -R u+x "$tomcat_home/bin"
