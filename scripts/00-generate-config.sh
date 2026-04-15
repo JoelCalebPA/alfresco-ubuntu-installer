@@ -218,7 +218,8 @@ main() {
     local current_home
     current_user="$(whoami)"
     current_group="$(id -gn)"
-    current_home="$(eval echo ~"$current_user")"
+    #current_home="$(eval echo ~"$current_user")"
+    current_home="/opt/alfresco-$(grep "^ALFRESCO_VERSION=" "$VERSIONS_FILE" | cut -d'"' -f2)"
     
     log_info "Detected user: $current_user (group: $current_group, home: $current_home)"
     
